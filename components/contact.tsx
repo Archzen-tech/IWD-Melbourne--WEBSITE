@@ -37,7 +37,7 @@ export function Contact({
                   <Phone className="size-3.5" aria-hidden="true" />
                   Phone
                 </dt>
-                <dd className="mt-2.5 font-serif text-[1.5rem] leading-none">
+                <dd className="mt-2.5 font-sans text-[1.375rem] font-semibold tracking-tight text-foreground leading-none">
                   {site.phone.display}
                 </dd>
               </div>
@@ -55,7 +55,7 @@ export function Contact({
                   <Mail className="size-3.5" aria-hidden="true" />
                   Email
                 </dt>
-                <dd className="mt-2.5 font-serif text-[1.25rem] leading-tight break-all">
+                <dd className="mt-2.5 font-sans text-[1.125rem] font-normal text-foreground/90 leading-tight break-all">
                   {site.email.display}
                 </dd>
               </div>
@@ -72,7 +72,7 @@ export function Contact({
                 <MapPin className="size-3.5" aria-hidden="true" />
                 Location
               </dt>
-              <dd className="mt-2.5 font-serif text-[1.25rem] leading-tight">
+              <dd className="mt-2.5 font-sans text-[1.125rem] font-normal text-foreground/90 leading-tight">
                 <address className="not-italic">
                   {site.location.display}
                 </address>
@@ -85,7 +85,7 @@ export function Contact({
                   <FacebookIcon className="size-3.5" />
                   Facebook
                 </dt>
-                <dd className="mt-2.5 font-serif text-[1.25rem] leading-tight">
+                <dd className="mt-2.5 font-sans text-[1.125rem] font-normal text-foreground/90 leading-tight">
                   {site.legalName}
                 </dd>
               </div>
