@@ -27,8 +27,8 @@ export const site = {
   url: 'https://iwdmelbourne.com.au',
 
   phone: {
-    display: '+43 1 422571',
-    href: 'tel:+431422571',
+    display: '0431 422 571',
+    href: 'tel:+61431422571',
   },
 
   email: {
