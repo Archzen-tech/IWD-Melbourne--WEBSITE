@@ -2,7 +2,6 @@ import Link from 'next/link'
 import { Mail, MapPin, Phone } from 'lucide-react'
 
 import { FacebookIcon } from '@/components/icons/facebook-icon'
-import { Logo } from '@/components/logo'
 import { services } from '@/lib/constants'
 import { nav, site } from '@/lib/site'
 
@@ -13,7 +12,9 @@ export function Footer() {
         <div className="grid gap-12 lg:grid-cols-12 lg:gap-8">
           {/* Identity */}
           <div className="lg:col-span-5">
-            <Logo tone="light" />
+            <span className="font-serif text-[1.5rem] font-light tracking-wide text-background block leading-none">
+              {site.name}
+            </span>
             <p className="text-background/60 mt-6 max-w-sm text-[0.9375rem] leading-relaxed">
               {site.description}
             </p>
