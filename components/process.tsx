@@ -97,17 +97,16 @@ export function Process() {
                     aria-hidden="true"
                   />
 
-                  {/* Step content */}
-                  <div
-                    className={`transition-all duration-700 ease-out ${
-                      isActive 
-                        ? 'opacity-100 translate-y-0' 
-                        : 'opacity-15 translate-y-[8px]'
-                    }`}
-                  >
-                    <span className="text-accent font-serif text-[0.9375rem] tracking-[0.15em] font-medium block">
-                      {step.number}
-                    </span>
+                    <div
+                      className={`transition-all duration-700 ease-out ${
+                        isActive 
+                          ? 'opacity-100 translate-y-0' 
+                          : 'opacity-15 translate-y-[8px]'
+                      }`}
+                    >
+                      <span className="text-accent font-sans text-[0.8125rem] tracking-[0.15em] font-bold block">
+                        {step.number}
+                      </span>
                     <h3 className="mt-3 font-serif text-[1.625rem] leading-snug font-normal text-foreground">
                       {step.title}
                     </h3>
