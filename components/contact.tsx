@@ -21,7 +21,7 @@ export function Contact({
     >
       <div className="grid gap-14 lg:grid-cols-12 lg:gap-16">
         {/* Details */}
-        <Reveal className="lg:col-span-5">
+        <Reveal className="lg:col-span-5 order-2 lg:order-1">
           {showHeading ? (
             <SectionHeading
               eyebrow="Contact"
@@ -103,7 +103,7 @@ export function Contact({
 
         {/* Form */}
         {showForm ? (
-          <Reveal className="lg:col-span-7" delay={100}>
+          <Reveal className="lg:col-span-7 order-1 lg:order-2" delay={100}>
             <div className="bg-muted/50 border-border border p-6 sm:p-9 lg:p-11">
               <h3 className="font-serif text-[1.75rem] leading-tight font-normal">
                 Send an Enquiry
