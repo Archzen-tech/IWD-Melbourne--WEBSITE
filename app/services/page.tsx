@@ -70,7 +70,7 @@ export default function ServicesPage() {
                   </div>
 
                   <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:gap-4">
-                    <CtaButton href="/contact">
+                    <CtaButton href={site.enquiry}>
                       Enquire About {service.title}
                       <ArrowRight className="size-4" aria-hidden="true" />
                     </CtaButton>

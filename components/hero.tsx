@@ -43,7 +43,7 @@ export function Hero() {
           </p>
 
           <div className="relative z-10 mt-8 flex -translate-y-8 flex-col gap-3 sm:mt-10 sm:translate-y-0 sm:flex-row sm:items-center sm:gap-4">
-            <CtaButton href="/contact" variant="solidLight">
+            <CtaButton href={site.enquiry} variant="solidLight">
               Get in Touch
               <ArrowRight className="size-4" aria-hidden="true" />
             </CtaButton>

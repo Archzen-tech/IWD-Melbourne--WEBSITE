@@ -105,8 +105,8 @@ export function Navbar() {
             {site.phone.display}
           </a>
 
-          <Link
-            href="/contact"
+          <a
+            href={site.enquiry}
             className={cn(
               'hover:bg-accent hover:text-background hidden px-6 py-3 text-[0.75rem] font-medium tracking-[0.14em] uppercase transition-colors duration-300 lg:inline-flex',
               onDarkHero
@@ -115,7 +115,7 @@ export function Navbar() {
             )}
           >
             Get in Touch
-          </Link>
+          </a>
 
           <button
             type="button"
@@ -154,12 +154,12 @@ export function Navbar() {
         </nav>
 
         <div className="mt-8 flex flex-col gap-3 px-5 pb-10 sm:px-8">
-          <Link
-            href="/contact"
+          <a
+            href={site.enquiry}
             className="bg-accent text-accent-foreground flex items-center justify-center px-6 py-4 text-[0.75rem] font-medium tracking-[0.14em] uppercase"
           >
             Get in Touch
-          </Link>
+          </a>
           <a
             href={site.phone.href}
             className="border-background/25 text-background hover:bg-background/10 flex items-center justify-center gap-2.5 border px-6 py-4 text-[0.75rem] font-medium tracking-[0.14em] uppercase"

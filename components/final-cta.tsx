@@ -35,7 +35,7 @@ export function FinalCta() {
               <Phone className="size-4" aria-hidden="true" />
               Call {site.phone.display}
             </CtaButton>
-            <CtaButton href="/contact" variant="outlineLight">
+            <CtaButton href={site.enquiry} variant="outlineLight">
               Send an Enquiry
               <ArrowRight className="size-4" aria-hidden="true" />
             </CtaButton>

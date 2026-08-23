@@ -1,4 +1,3 @@
-import Link from 'next/link'
 import { Phone } from 'lucide-react'
 
 import { site } from '@/lib/site'
@@ -20,12 +19,12 @@ export function MobileContactBar() {
         <Phone className="size-4" aria-hidden="true" />
         Call Now
       </a>
-      <Link
-        href="/contact"
+      <a
+        href={site.enquiry}
         className="bg-accent text-accent-foreground flex items-center justify-center py-4 text-[0.75rem] font-medium tracking-[0.12em] uppercase"
       >
         Get in Touch
-      </Link>
+      </a>
     </div>
   )
 }

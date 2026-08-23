@@ -1,7 +1,6 @@
-import { Mail, MapPin, Phone } from 'lucide-react'
+import { ArrowRight, Mail, MapPin, Phone } from 'lucide-react'
 
 import { FacebookIcon } from '@/components/icons/facebook-icon'
-import { ContactForm } from '@/components/contact-form'
 import { Reveal } from '@/components/reveal'
 import { SectionHeading } from '@/components/section-heading'
 import { site } from '@/lib/site'
@@ -101,18 +100,26 @@ export function Contact({
           </dl>
         </Reveal>
 
-        {/* Form */}
+        {/* Form Redirect */}
         {showForm ? (
           <Reveal className="lg:col-span-7 order-1 lg:order-2" delay={100}>
-            <div className="bg-muted/50 border-border border p-6 sm:p-9 lg:p-11">
+            <div className="bg-muted/50 border-border border p-6 sm:p-9 lg:p-11 flex flex-col justify-center min-h-[300px]">
               <h3 className="font-serif text-[1.75rem] leading-tight font-normal">
                 Send an Enquiry
               </h3>
-              <p className="text-muted-foreground mt-2.5 text-[0.9375rem] leading-relaxed">
-                Share a few details about your space and we&apos;ll be in touch.
+              <p className="text-muted-foreground mt-3 text-[0.9375rem] leading-relaxed">
+                To start planning your kitchen, laundry, wardrobe, or custom cabinetry project, please fill out our online enquiry form.
               </p>
               <div className="mt-8">
-                <ContactForm />
+                <a
+                  href={site.enquiry}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-accent text-accent-foreground hover:bg-accent/90 inline-flex w-full items-center justify-center gap-3 px-6 py-4 text-[0.75rem] font-medium tracking-[0.14em] uppercase transition-colors"
+                >
+                  Start Enquiry Form
+                  <ArrowRight className="size-4" aria-hidden="true" />
+                </a>
               </div>
             </div>
           </Reveal>

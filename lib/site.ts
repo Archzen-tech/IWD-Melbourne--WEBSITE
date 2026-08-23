@@ -48,6 +48,8 @@ export const site = {
     facebook: 'https://www.facebook.com/profile.php?id=61564715591263',
   },
 
+  enquiry: 'https://enquiry.iwdmelbourne.com.au/',
+
   /** Secondary information — not for prominent display. */
   facebookStats: { followers: 187, following: 10 },
 } as const
