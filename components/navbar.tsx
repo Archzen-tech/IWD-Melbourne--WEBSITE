@@ -58,9 +58,9 @@ export function Navbar() {
     <header
       className={cn(
         'fixed inset-x-0 top-0 z-50 transition-[background-color,box-shadow,backdrop-filter] duration-500',
-        scrolled || open
-          ? 'bg-background/92 border-border/70 border-b backdrop-blur-md'
-          : 'bg-transparent',
+        onDarkHero
+          ? 'bg-transparent'
+          : 'bg-charcoal/95 border-white/10 border-b backdrop-blur-md',
       )}
     >
       <div
@@ -69,7 +69,7 @@ export function Navbar() {
           scrolled ? 'h-16' : 'h-16 lg:h-20',
         )}
       >
-        <Logo tone={onDarkHero ? 'light' : 'dark'} />
+        <Logo />
 
         <nav aria-label="Primary" className="hidden items-center gap-9 lg:flex">
           {nav.map((item) => {
@@ -86,12 +86,8 @@ export function Navbar() {
                   'relative py-1 text-[0.8125rem] tracking-[0.06em] transition-colors',
                   'after:bg-accent after:absolute after:-bottom-0.5 after:left-0 after:h-px after:transition-[width] after:duration-300 after:content-[""]',
                   active
-                    ? `after:w-full ${onDarkHero ? 'text-background' : 'text-foreground'}`
-                    : `after:w-0 hover:after:w-full ${
-                        onDarkHero
-                          ? 'text-background/70 hover:text-background'
-                          : 'text-muted-foreground hover:text-foreground'
-                      }`,
+                    ? 'after:w-full text-background'
+                    : 'after:w-0 hover:after:w-full text-background/70 hover:text-background',
                 )}
               >
                 {item.label}
@@ -103,12 +99,7 @@ export function Navbar() {
         <div className="flex items-center gap-3">
           <a
             href={site.phone.href}
-            className={cn(
-              'hidden items-center gap-2 text-[0.8125rem] tracking-[0.04em] transition-colors xl:flex',
-              onDarkHero
-                ? 'text-background/70 hover:text-background'
-                : 'text-muted-foreground hover:text-foreground',
-            )}
+            className="hidden items-center gap-2 text-[0.8125rem] tracking-[0.04em] transition-colors xl:flex text-background/70 hover:text-background"
           >
             <Phone className="size-3.5" aria-hidden="true" />
             {site.phone.display}
@@ -132,12 +123,7 @@ export function Navbar() {
             aria-expanded={open}
             aria-controls="mobile-menu"
             aria-label={open ? 'Close menu' : 'Open menu'}
-            className={cn(
-              '-mr-1 inline-flex size-11 items-center justify-center border transition-colors lg:hidden',
-              onDarkHero
-                ? 'border-background/30 text-background hover:bg-background/10'
-                : 'border-border text-foreground hover:bg-secondary',
-            )}
+            className="-mr-1 inline-flex size-11 items-center justify-center border transition-colors lg:hidden border-background/30 text-background hover:bg-background/10"
           >
             {open ? (
               <X className="size-5" aria-hidden="true" />
@@ -152,14 +138,14 @@ export function Navbar() {
       <div
         id="mobile-menu"
         hidden={!open}
-        className="bg-background border-border/70 h-[calc(100dvh-4rem)] overflow-y-auto border-t lg:hidden"
+        className="bg-charcoal border-white/10 h-[calc(100dvh-4rem)] overflow-y-auto border-t lg:hidden"
       >
         <nav aria-label="Mobile" className="flex flex-col px-5 pt-4 sm:px-8">
           {nav.map((item, i) => (
             <Link
               key={item.href}
               href={item.href}
-              className="border-border/70 font-serif text-[1.75rem] leading-tight tracking-wide not-last:border-b py-4"
+              className="border-white/10 text-background font-serif text-[1.75rem] leading-tight tracking-wide not-last:border-b py-4"
               style={{ transitionDelay: `${i * 30}ms` }}
             >
               {item.label}
@@ -170,21 +156,21 @@ export function Navbar() {
         <div className="mt-8 flex flex-col gap-3 px-5 pb-10 sm:px-8">
           <Link
             href="/contact"
-            className="bg-foreground text-background flex items-center justify-center px-6 py-4 text-[0.75rem] font-medium tracking-[0.14em] uppercase"
+            className="bg-accent text-accent-foreground flex items-center justify-center px-6 py-4 text-[0.75rem] font-medium tracking-[0.14em] uppercase"
           >
             Get in Touch
           </Link>
           <a
             href={site.phone.href}
-            className="border-foreground/25 text-foreground flex items-center justify-center gap-2.5 border px-6 py-4 text-[0.75rem] font-medium tracking-[0.14em] uppercase"
+            className="border-background/25 text-background hover:bg-background/10 flex items-center justify-center gap-2.5 border px-6 py-4 text-[0.75rem] font-medium tracking-[0.14em] uppercase"
           >
             <Phone className="size-4" aria-hidden="true" />
             Call {site.phone.display}
           </a>
-          <div className="text-muted-foreground mt-4 flex flex-col gap-3 text-sm">
+          <div className="text-background/50 mt-4 flex flex-col gap-3 text-sm">
             <a
               href={site.email.href}
-              className="hover:text-foreground flex items-center gap-2.5 transition-colors"
+              className="hover:text-background flex items-center gap-2.5 transition-colors"
             >
               <Mail className="size-4" aria-hidden="true" />
               {site.email.display}
@@ -193,7 +179,7 @@ export function Navbar() {
               href={site.social.facebook}
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-foreground flex items-center gap-2.5 transition-colors"
+              className="hover:text-background flex items-center gap-2.5 transition-colors"
             >
               <FacebookIcon className="size-4" />
               Follow us on Facebook
