@@ -1,13 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  output: 'export',
   images: {
-    /**
-     * The v0 sandbox does not serve the /_next/image optimizer endpoint, so
-     * optimization is disabled to keep images rendering in the preview.
-     * On Vercel the optimizer IS available — remove this line after deploying
-     * to get AVIF/WebP resizing from the `sizes` props already set on every
-     * <Image>, at no code cost.
-     */
     unoptimized: true,
   },
   async headers() {
