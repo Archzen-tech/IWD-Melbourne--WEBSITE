@@ -8,7 +8,7 @@ import { nav, site } from '@/lib/site'
 export function Footer() {
   return (
     <footer className="bg-charcoal text-background/70">
-      <div className="mx-auto max-w-[88rem] px-5 pt-20 pb-10 sm:px-8 lg:px-12 lg:pt-28">
+      <div className="mx-auto max-w-[88rem] px-5 pt-20 pb-24 sm:pb-12 sm:px-8 lg:px-12 lg:pt-28">
         <div className="grid gap-12 lg:grid-cols-12 lg:gap-8">
           {/* Identity */}
           <div className="lg:col-span-5">
@@ -118,7 +118,7 @@ export function Footer() {
           <p className="text-background/45 text-[0.8125rem]">
             © 2026 {site.legalName}. All rights reserved.
           </p>
-          <div className="flex items-center gap-6">
+          <div className="flex flex-wrap items-center gap-6">
             <Link
               href="/privacy"
               className="text-background/45 hover:text-background/80 text-[0.8125rem] transition-colors"
@@ -131,6 +131,15 @@ export function Footer() {
             >
               Terms &amp; Conditions
             </Link>
+            <a
+              href="https://www.archzen.ai/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-background/60 hover:text-background text-[0.8125rem] font-medium tracking-wide transition-colors inline-flex items-center gap-1.5 group"
+            >
+              Website by ArchZen
+              <span aria-hidden="true" className="transition-transform duration-200 group-hover:translate-x-1">→</span>
+            </a>
           </div>
         </div>
       </div>
