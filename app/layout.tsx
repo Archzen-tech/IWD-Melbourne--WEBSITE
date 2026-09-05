@@ -74,8 +74,11 @@ export const metadata: Metadata = {
   },
   generator: 'v0.app',
   icons: {
-    icon: [{ url: `${basePath}/icon.png`, type: 'image/png' }],
-    apple: `${basePath}/icon.png`,
+    icon: [
+      { url: `${basePath}/favicon.ico` },
+      { url: `${basePath}/icon.png`, type: 'image/png' },
+    ],
+    apple: `${basePath}/apple-icon.png`,
   },
 }
 
