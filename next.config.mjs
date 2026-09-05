@@ -9,6 +9,7 @@ const nextConfig = {
   images: {
     loader: 'custom',
     loaderFile: './image-loader.js',
+    unoptimized: true,
   },
   env: {
     NEXT_PUBLIC_BASE_PATH: basePath,
