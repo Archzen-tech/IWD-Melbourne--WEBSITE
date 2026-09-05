@@ -61,7 +61,7 @@ export function Intro() {
                 />
               </div>
               <div className="bg-secondary flex min-h-56 flex-col justify-end p-6 sm:min-h-64 lg:min-h-0 lg:flex-1 lg:p-5">
-                <p className="text-muted-foreground max-w-sm font-serif text-[1.5rem] leading-snug sm:text-[1.7rem] lg:text-[1.375rem]">
+                <p className="text-foreground max-w-sm font-serif text-[1.5rem] leading-snug sm:text-[1.7rem] lg:text-[1.375rem]">
                   Kitchens, laundries, vanities, wardrobes, garages and more.
                 </p>
               </div>
