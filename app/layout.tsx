@@ -23,6 +23,8 @@ const cormorant = Cormorant_Garamond({
   variable: '--font-cormorant',
 })
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || ''
+
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: {
@@ -72,8 +74,8 @@ export const metadata: Metadata = {
   },
   generator: 'v0.app',
   icons: {
-    icon: [{ url: '/icon.png', type: 'image/png' }],
-    apple: '/icon.png',
+    icon: [{ url: `${basePath}/icon.png`, type: 'image/png' }],
+    apple: `${basePath}/icon.png`,
   },
 }
 

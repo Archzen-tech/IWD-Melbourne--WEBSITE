@@ -1,8 +1,17 @@
+const isGitHubPages = process.env.GITHUB_ACTIONS === 'true' && !process.env.VERCEL
+const repoName = process.env.GITHUB_REPOSITORY ? `/${process.env.GITHUB_REPOSITORY.split('/')[1]}` : '/IWD-Melbourne--WEBSITE'
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || (isGitHubPages ? repoName : '')
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: 'export',
+  basePath: basePath || undefined,
   images: {
-    unoptimized: true,
+    loader: 'custom',
+    loaderFile: './image-loader.js',
+  },
+  env: {
+    NEXT_PUBLIC_BASE_PATH: basePath,
   },
   async headers() {
     return [
